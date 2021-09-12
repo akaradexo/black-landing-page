@@ -4,15 +4,82 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faith◘Hope◘Love</title>
+  <title>NICE</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assests/images/circle-logo.png">
   <link rel="stylesheet" href="./styles/normalize.css">
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/nslider.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
       <!-- Navbar -->
-     
+     <nav>
+       <div class="navbar">
+         <div class="nav-brand">
+          <h4>NICESCALE</h4>
+          <h4 style="color: #C59968;">STONES</h4>
+         </div>
+         <div class="nav-links">
+          <ul>
+            <li><a href="">SHOP</a></li>
+            <li> <a href="">PORTFOLIO</a></li>
+            <li><a href="">about us</a></li>
+          </ul>
+         </div>
+         <div class="stone">
+          <i class="fas fa-qrcode"></i>
+         </div>
+       </div>
+     </nav>
+     <!-- stone -->
+     <div class="stone-background"></div>
+     <!-- header -->
+     <header>
+       <div class="heading">
+         <h1>nice</h1>
+       </div>
+       <div class="slider-container">
+        <div class="nslider">
+          <div class="nslider-wrapper">
+              <div class="nslider-slide" id="slide-1">
+                  a Collection of the most popular photos.
+              </div>
+              <div class="nslider-slide" id="slide-2">
+                  Slide 2
+              </div>
+              <div class="nslider-slide" id="slide-3">
+                  Slide 3
+              </div>
+          </div>
+            <div class="nslider-button nslider-button-prev"><p></p></div>
+            <div class="nslider-button nslider-button-next"><p></p></div>
+        </div>
+      </div>
+     </header>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/nslide.js"></script>
+<script>
+  const slider = new NSlider({ // Only 'elem' key required.
+      elem: document.querySelector('.slider-container'), // A parent element of the slider
+      // NOTE: The specified parent element can have only 1 NSlider.
+      
+      // animation: true, // Animation opens with default settings
+      
+      animation: { // Custom Animation Options
+           duration: 1000, // Milliseconds
+           timingFunction: 'ease-in' // CSS's animation timing functions
+      },
+      
+      keyboardControl: true, // Slider can be controlled with right and left arrows
+      // currentSlide: 2, // Current slide index. It starts from 0 because it is in array logic
+      // prevButtonInner: '<', // Custom "previous" button content
+      // nextButtonInner: '>', // Custom "next" button content
+      dots: true, // Dots as the number of slides below the slider
+  });
+  
+  // Optional
+  setInterval(() => slider.next(), 5000); // Every 5 seconds the slider automatically moves to the next slide
+  // setInterval(() => slider.prev(), 5000); // Every 5 seconds the slider automatically moves to the previous slide
+</script>
 </html>
