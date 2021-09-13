@@ -21,11 +21,18 @@
 .nslider .nslider-slide {
   min-width: 400px;
   width: 100%;
-  padding: 20px;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
 }
+.nslider .nslider-slide h4{
+  width: 12rem;
+ 
+}
+
 
 .nslider .nslider-button {
   position: absolute;
